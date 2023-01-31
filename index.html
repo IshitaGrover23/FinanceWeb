@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Smooth scroll */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Utility classes */
+
+.text-secondary{
+    color: darkviolet;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 25px;
+    margin-right: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: darkslateblue;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Showcase Area Styling */
+
+.showcase{
+    background: linear-gradient(rgba(0,0,0,0.6));
+    width: 100%;
+    height: 90vh;  
+}
+
+/* Top navbar */
+
+.showcase .navbar-top{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    padding: 0 40px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    top: 0;
+    left: 0;
+}
+
+.showcase .left{
+    display: flex;
+    list-style: none;
+}
+
+.showcase .left li a{
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    transition: all 0.5s ease;
+}
+
+.showcase .left li a:hover{
+    color: green;
+}
+
+.showcase .right{
+    display: flex;
+    list-style: none;
+}
+
+.showcase .right li a{
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: darkblue;
+    transition: all 0.5s ease;
+}
+
+.showcase .right li a:hover{
+    color: red;
+}
+
+/* Bottom navbar */
+
+.showcase .navbar-bottom{
+    width: 100%;
+    background: rosybrown;
+    padding: 25px 95px;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.navbar-bottom.sticky{
+    padding: 15px 95px;
+    background: burlywood;
+    border-bottom: 1px solid black;
+    color: blue;
+    top: 0;
+    z-index: 999;
+}
+
+.showcase .navbar-bottom .brand-left h2{
+    color:saddlebrown;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.showcase .navbar-bottom.sticky .brand-left{
+    color: darkmagenta;
+}
+
+.showcase .navbar-bottom .menu-right{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.showcase .navbar-bottom.sticky .menu-right li:last-child{
+    display: none;
+}
+
+.showcase .navbar-bottom .menu-right a{
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0 20px;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.showcase .navbar-bottom .menu-right a:hover{
+    color: turquoise;
+}
+
+
+
+/* Showcase content section styling */
+
+.showcase .showcase-content{
+    max-width: 850px;
+    margin-top: 15%;
+    padding: 0 95px;
+    
+}
+
+.showcase .showcase-content h1{
+    color: darkviolet;
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.showcase .showcase-content span{
+    color: dodgerblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+.showcase .showcase-content p{
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.showcase .showcase-content .btn-right{
+    background: linear-gradient(yellow, orange);
+    align-content: center;
+    cursor: pointer;
+}
+
+.showcase .showcase-content .btn-right:hover{
+    color: rgb(216, 10, 182);
+}
+
+.showcase .showcase-content .fin-img{
+    width: 50%;
+    padding-top: 50px;
+}
+
+.wrapper{
+    max-width: 1320px;
+    padding: 0 50px -50px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Services section styling */
+
+.services-heading{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 320px;
+    padding-bottom: 60px;
+    color: black;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: -20%;
+}
+
+#services .items{
+    display: flex;
+    padding-bottom: 40px;
+}
+
+#services .items .item{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background: lightgray;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3), -5px -5px 20px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+#services .items .item h3{
+    color: darkmagenta;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#services .items .item p{
+    line-height: 1.4;
+    color: darkslateblue;
+}
+
+#services .items .item i{
+    color: dodgerblue;
+}
+
+#services .items .item:hover i{
+    color: darkslateblue;
+}
+
+#services .items .item:hover{
+    background: gainsboro;
+    transform: scale(1.05) ;
+}
+
+#services .items .item:hover h3{
+    color: darkred;
+}
+
+/* Services section bottom */
+
+#goal{
+    display: flex;
+    padding-top: 20px;
+}
+
+#goal div{
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+#goal .goal-img{
+    display: inline-block;
+    position: relative;
+    width: 450px;
+    height: 400px;
+    overflow: hidden;
+    padding-top: 120px;
+    padding-left: 100px;
+    padding-right: 40px;
+}
+
+#goal .goal-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#goal .goal-text{
+    margin: 70px 40px;
+}
+
+#goal .goal-text a:hover{
+    color: hotpink;
+    background: indigo;
+}
+
+#goal .goal-text h2{
+    margin: 20px 0;
+    color: maroon;
+}
+
+#goal .goal-text .contents{
+    display: flex;
+}
+
+#goal .goal-text .contents .content{
+    flex: none;
+    padding: 10px;
+}
+
+#goal .goal-text .contents .content h3{
+    font-size: 16px;
+    padding-bottom: 5px;
+    color: slateblue;
+}
+
+#goal .goal-text .contents .content p{
+    color: darkolivegreen;
+}
+
+#goal .goal-text .contents .content i{
+    color:yellow;
+    padding: 3px;
+    background: darkviolet;
+    align-self: flex-start;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Portfolio section styling */
+
+#portfolio{
+    background: lightcyan;
+    background-image: url(images/C.jpg);
+    padding-bottom: -10%;
+
+}
+
+#portfolio h3{
+    color: dimgray;
+    font-size: 14px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.portfolio h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: royalblue;
+    margin-bottom: 20px;
+}
+
+.portfolio h2 span{
+    font-weight: 500;
+}
+
+.portfolio p{
+    color: darkslategray;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.read-more{
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+.read-more a{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+button{
+  margin: 5px;
+}
+.custom-btn{
+  width: 130px;
+  height: 40px;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background: lightcoral;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn:hover{
+    background: linear-gradient(0deg, lightskyblue 0%, lightpink);
+}
+
+ .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+}
+
+/* Team section styling */
+
+#teams h3{
+    color: dimgrey;
+    font-size: 14px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+
+#teams h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: dodgerblue;
+    margin-bottom: 20px;
+}
+
+#teams h2 span{
+    font-weight: 700;
+}
+
+#teams p{
+    color: brown;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+#teams .wrapper .card-items{
+    display: flex;
+    margin-top: -50px;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#team .wrapper .card{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: coral;
+    border-radius: 5px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 280px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+#teams .wrapper .card:hover{
+    background: linen;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#teams .wrapper .card .card-header{
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 30px auto;
+    transform: translateY(40px);
+}
+
+#teams .wrapper .card .card-header img{
+    width: 100%;
+    height: auto;
+}
+
+#teams .wrapper .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 200px;
+}
+
+#teams .wrapper .card h3{
+    font-size: 16px;
+    color: darkred;
+    padding-top: 30px;
+}
+
+#teams .wrapper .card .card-body h4{
+    font-size: 14px;
+    font-weight: 600;
+    color: goldenrod;
+    margin-top: 0px;
+}
+
+#teams .wrapper .card .card-body ul{
+    display: flex;
+    list-style: none;
+    padding-top: 50px;
+}
+
+#teams .wrapper .card .card-body ul li i{
+    padding: 5px;
+    margin: 0 7px;
+    border: 1px solid lightseagreen;
+    border-radius: 50%;
+    background: black;
+    color: lightskyblue;
+    /* transition all 0.3s ease */
+}
+
+#teams .wrapper .card .card-body ul li i:hover{
+    background: limegreen;
+    color: deepskyblue;
+}
+
+/* Blog section styling */
+
+#blog{
+    background: lightyellow;
+}
+
+#blog .wrapper .header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#blog .wrapper .header span{
+    height: 1px;
+    width: 4%;
+    background: darkmagenta;
+}
+
+#blog .wrapper .header h4{
+    color: darkred;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+#blog .wrapper .blog-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#blog .wrapper .blog-info h2{
+    font-size: 40px;
+    color: deeppink;
+    font-weight: 600;
+}
+
+#blog .wrapper .blog-info h2 span{
+    font-weight: 500;
+}
+
+#blog .wrapper .blog-info a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background: lightpink;
+    color: darkslategrey;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#blog .wrapper .blog-info a:hover{
+    background: none;
+    color: darkolivegreen;
+}
+
+#blog .wrapper .blog-card{
+    display: flex;
+    margin-top: -50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#blog .wrapper .card{
+    margin: 70px 5px;
+    background-color: lightcyan;
+    border-radius: 5px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    width: 370px;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+#blog .wrapper .card:hover{
+    transform: scale(1.05);
+}
+
+#blog .wrapper .card .card-header img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#blog .wrapper .card .card-body .tag{
+    background: lightgreen;
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 30px;
+    color: darkslateblue;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#blog .wrapper .card .card-body h4{
+    margin: 10px 30px;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: black;
+}
+
+#blog .wrapper .card .card-body .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 10px 2px 30px;
+    border-top: 1px solid blueviolet; 
+    padding: 5px 0;
+}
+
+#blog .wrapper .card .card-body .footer small{
+    color: darkslategray
+    font-weight: 600;
+}
+
+#blog .wrapper .card .card-body .footer a{
+    padding: 5px 10px;
+    background: darkturquoise;
+    border-radius: 4px;
+    color: black;
+}
+
+/* Contact section styling */
+
+#contact h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: darkslateblue;
+    margin-bottom: 10px;
+    padding-top: 70px;
+}
+
+#contact p{
+    color: firebrick;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+#contact .wrapper form{
+    display: flex;
+    flex-direction: column;
+    min-width: 550px;
+    margin: 0 auto;
+}
+
+#contact .wrapper form input{
+    padding: 8px;
+    border: black 1px solid;
+    outline: none;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+#contact .wrapper form .button{
+    padding: 8px;
+    margin-bottom: 100px;
+    background: lightpink;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#contact .wrapper form .button:hover{
+    background: brown;
+    color: yellow;
+    cursor: pointer;
+}
+
+/* Footer section styling */
+
+.footer-bottom{
+    background: lightgreen;
+}
+
+.dance{
+    padding-top: 10px;
+    width: auto;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 600px;
+}
+
+
+
+</style>
+<body id="home">
+
+    </div>
+    <div class="showcase">
+        <!-- navbar top section -->
+
+        <div class="navbar-top">
+            
+                <i class="fa-sharp fa-solid fa-landmark"></i>
+                <i class="clock">Mon-Sat 9am - 6pm</i>
+                <i class="address">DLF CyberHub,<br>Gurugram</i>
+                <i class="contact">011-2352-7854<br>info@finance.org</i>
+                
+        
+            <ul class="right">
+                <li>Solutions that never miss the aim</li>
+            </ul>
+        </div>
+        <!-- navbar bottom section -->
+        <div class="navbar-bottom">
+                <h2 class="brand-left">FinExpert</h2>
+                <ul class="menu-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#teams">Team</a></li>
+                    <li><a href="#blog">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://ishitagrover23.github.io/final-cv/">Founder</a></li>
+                </ul>
+        </div>
+
+        <ul>
+
+        <!-- Showcase content section -->
+        <div class="showcase-content">
+            <h1>We deliver Digital <br> strategies <span>& analytics</span></h1>
+            <p>We are a boutique firm designed for Private Equity, Family offices <br> and growth stage companies seeking to maximise results.</p>
+            <a href="form.html" class="btn btn-right">Make an Appointment</a>
+            <div class="fin-img"><img src="images/F.jpeg"></div>
+        </div>
+    </div>
+
+<!-- Services / Goal section -->
+
+<section id="services" class="bg-light py-3">
+    <div class="services-heading">What do we do</div>
+    <div class="wrapper">
+        <div class="items">
+            <div class="item">
+                
+                <h3>Financial Planning</h3>
+                <p>We'll help you make sensible decisions about money that can help you achieve your goals in life.</p>
+            </div>
+            <div class="item">
+                
+                <h3>Retirement Planning</h3>
+                <p>Use our strategies and retirement advice, including retirement calculators to help you retire faster.</p>
+            </div>
+            <div class="item">
+                
+                <h3>Risk Management</h3>
+                <p>Risk management is intended to manage financial and other losses associated with risks to your assets or business.</p>
+            </div>
+            <div class="item">
+                
+                <h3>Taxation</h3>
+                <p>Tax planning considers the tax implications of business decisions, usually with the goal of minimizing tax liability.</p>
+            </div>
+        </div>
+        <div id="goal" class="goal">
+            <div class="goal-img">
+                <img src="images/A.jpeg">
+            </div>
+            <div class="goal-text">
+                
+                <h2>Investment banking & <br> Capital market</h2>
+                <div class="contents">
+                    <div class="content p-4">
+                        <i class="fa-solid fa-arrows-to-dot"></i>
+                    </div>
+                    <div class="content p-4">
+                        <h3>Investment management</h3>
+                
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="content p-4">
+                        <i class="fa-solid fa-arrows-to-dot"></i>
+                    </div>
+                    <div class="content p-4">
+                        <h3>Private Credit & Equity</h3>
+                      
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="content p-4">
+                        <i class="fa-solid fa-arrows-to-dot"></i>
+                    </div>
+                    <div class="content p-4">
+                        <h3>Business multi solutions</h3>
+                      
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio section -->
+
+<section id="portfolio" class="portfolio py-3">
+    <h3 class="text-center">Company portfolio</h3>
+    <h2 class="text-center">About <span class="text-secondary"> Us </span></h2>
+    <p class="text-center">Doing the right thing, at the right time.<br>
+        Welcome to the leading company on the market! Our success is driven by the highest quality customer service. We can meet the requirements even of the whimsical clients; there are no complex tasks for us! Thanks for your choice! Our company can boast the reputation of the trusted partner known worldwide. We are proud of the uncompromising quality of services</p>
+    </section>
+    <header>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     </header>
+     <div class="read-more">
+       <button class="custom-btn btn"><a href="about.html">Read More</a></button>
+       </div>
+
+       <marquee scrollamount="15">
+        <div class="dance"> 
+        <image src="images/E.jpg">
+         <image src="images/R.jpeg">
+          <image src="images/U.jpeg">
+           <image src="images/T.jpeg">
+            <image src="images/S.jpeg">
+             <image src="images/V.jpeg">
+              <image src="images/E.jpg">	
+              <image src="images/R.jpeg">
+              <image src="images/U.jpeg">
+              <image src="images/T.jpeg">
+                <image src="images/S.jpeg">
+                    <image src="images/V.jpeg">
+                        <image src="images/E.jpg">
+                            <image src="images/R.jpeg">
+                             <image src="images/U.jpeg">
+                              <image src="images/T.jpeg">
+                               <image src="images/S.jpeg">
+                                <image src="images/V.jpeg">
+              </div>
+              </marquee>
+        
+
+
+<!-- Team section -->
+<section id="teams" class="teams bg-light py-3">
+    <h3 class="text-center">No matter the project, our team can handle it</h3>
+    <h2 class="text-center">Meet our <span class="text-secondary">Professional team</span></h2>
+    <p class="text-center">We help you see the world differently, discover opportunities you might have never imagined, and achieve results that bridge what is-with-what can be</p>
+    <div class="wrapper">
+        <div class="card-items">
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/H.jpeg">
+                </div>
+                <div class="card-body">
+                    <h3>Warren Buffett</h3>
+                    <h4>Chief Business Project</h4>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/I.jpeg">
+                </div>
+                <div class="card-body">
+                    <h3>Dave Ramsey</h3>
+                    <h4>Chief Communication Officer</h4>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/L.jpeg">
+                </div>
+                <div class="card-body">
+                    <h3>Karen Mcdonald</h3>
+                    <h4>International Consultant</h4>
+                  
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/K.webp">
+                </div>
+                <div class="card-body">
+                    <h3>Farnoosh Tornabi</h3>
+                    <h4>Co-Founder</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog section -->
+
+<section id="blog" class="blog py-3">
+    <div class="wrapper">
+        <div class="header">
+            
+        </div>
+        <div class="blog-info">
+            <h2>Read our <span class="text-secondary">Testimonials</span></h2>
+        
+        </div>
+        <div class="blog-card">
+            <div class="card">
+                <div class="card-header">
+                    
+                    <img src="images/M.jpeg">
+                </div>
+                <div class="card-body">
+                    <span class="tag tag-yellow">Louise Smith</span>
+                    <h4> <br>Wow, I am so happy with your service. You managed to exceed my expectations! You guys are very efficient.</h4>
+                    <div class="footer">
+                        <small>26 Aug, 2021</small>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/O.jpeg">
+                </div>
+                <div class="card-body">
+                    <span class="tag tag-purple">Jack Walsh</span>
+                    <h4><br>Great organisation! You have rendered an invaluable service! Thank you!</h4>
+                    <div class="footer">
+                        <small>12 Feb, 2022</small>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/Q.jpeg">
+                </div>
+                <div class="card-body">
+                    <span class="tag tag-pink">Adam Watson</span>
+                    <h4><br>Hi, guys! You have solved my problem in no time. Your efficient services and customer care, are second to none. </h4>
+                    <div class="footer">
+                        <small>23 Nov, 2022</small>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter section -->
+
+<section id="contact" class="contact bg-secondary py-3">
+    <h2 class="text-center">Subscribe to our Newsletter</h2>
+    <p class="text-center">Get latest updates and offers.</p>
+    <div class="wrapper">
+        <form class="text-center">
+            <input type="email" name="email" id="email" placeholder="Enter email address">
+            <button class="button">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer section -->
+
+<footer class="footer-bottom py-3 text-center">
+    <p>Copyright &copy: 2023 by Ishita Grover. All Rights Reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+</body>
+</html>
